@@ -17,6 +17,7 @@ pipeline {
             steps{
                 sh 'aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 374263475486.dkr.ecr.ap-south-1.amazonaws.com'
                 echo 'AWS Docker Login Success...'
+            }
         }
    }
     
