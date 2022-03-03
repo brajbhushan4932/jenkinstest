@@ -1,7 +1,6 @@
 pipeline {
-	triggers { pollSCM('H/10 * * * *') }
-    // use the 'tools' section to use specific tool versions already defined in Jenkins config
-    
+
+    agent any
 
     stages {
 
@@ -11,7 +10,7 @@ pipeline {
                 echo 'Building and Testing..'
             }
         }
-	}
+    }
 
     post {
         success {
